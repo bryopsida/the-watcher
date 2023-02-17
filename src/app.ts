@@ -1,15 +1,18 @@
 import { Container } from "inversify"
 import esMain from "es-main"
+import { TYPES } from "./types"
+import { Logger } from "pino"
 
 export default async function main(container: Container): Promise<void> {}
 
 if (esMain(import.meta)) {
   const appContainer = (await import("./inversify.config")).appContainer
+  const logger = appContainer.get<Logger>(TYPES.Services.Logging)
   main(appContainer)
     .then(() => {
-      console.log("Finished execution")
+      logger.info("Finished execution")
     })
     .catch((err) => {
-      console.error(`Error while running: ${err}`)
+      logger.error(err, "Error while running: %s", err)
     })
 }
