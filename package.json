@@ -59,6 +59,7 @@
     "dotenv": "^16.0.3",
     "es-main": "^1.2.0",
     "execa": "^7.0.0",
+    "pino": "^8.10.0",
     "reflect-metadata": "^0.1.13"
   }
 }
