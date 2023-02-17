@@ -1,0 +1,27 @@
+{
+  "name": "@bryopsida/the-watcher",
+  "version": "0.1.0",
+  "description": "An aggregation of several tools that to scan a kubernetes cluster and generate a sbom, sca and other reports, and send them to slack as attachments",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryopsida/the-watcher.git"
+  },
+  "keywords": [
+    "k8s",
+    "security",
+    "cronjob",
+    "slack",
+    "mattermost",
+    "teams"
+  ],
+  "author": "bryopsida",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bryopsida/the-watcher/issues"
+  },
+  "homepage": "https://github.com/bryopsida/the-watcher#readme"
+}
