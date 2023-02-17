@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "description": "An aggregation of several tools that to scan a kubernetes cluster and generate a sbom, sca and other reports, and send them to slack as attachments",
   "main": "dist/app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --coverage --testPathPattern='test/.*\\.spec\\.ts'",
+    "build": "node_modules/typescript/bin/tsc --project .",
+    "prepack": "npm run build",
+    "start": "node dist/app.js",
+    "lint": "eslint --ext .ts src/ test/ && prettier --check .",
+    "lint:fix": "eslint --ext .ts src/ test/ --fix && prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -51,6 +57,7 @@
     "@microsoft/teams-js": "^2.8.0",
     "@slack/web-api": "^6.8.1",
     "dotenv": "^16.0.3",
+    "es-main": "^1.2.0",
     "execa": "^7.0.0"
   }
 }
