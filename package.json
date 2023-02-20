@@ -5,6 +5,7 @@
   "main": "dist/app.js",
   "type": "module",
   "scripts": {
+    "start": "node dist/app.js",
     "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --coverage --testPathPattern='test/.*\\.spec\\.ts'",
     "build": "node_modules/typescript/bin/tsc --project .",
     "prepack": "npm run build",
