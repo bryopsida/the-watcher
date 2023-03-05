@@ -1,0 +1,8 @@
+{
+  "clusterName": null,
+  "downloadLatestBinaries": true,
+  "desiredReports": ["SCA", "IAC", "SBOM"],
+  "reportDestinations": [],
+  "customTrivyPath": null,
+  "customKICSPath": null
+}

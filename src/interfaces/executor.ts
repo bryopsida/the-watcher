@@ -5,5 +5,5 @@ export interface IExecutor {
 }
 
 export interface IExecutorFactory {
-  build(type: ReportType): Promise<IExecutor>
+  build(type: ReportType, binaryLocation?: string | null): Promise<IExecutor>
 }

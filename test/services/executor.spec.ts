@@ -1,10 +1,15 @@
 import { describe, it, expect } from "@jest/globals"
+import { ExecutorFactory } from "../../src/services/executor"
+import { ReportType } from "../../src/interfaces/config"
 
 describe("Executor", () => {
-  describe("KICSExecutor", () => {
-    describe("generateReport()", () => {
-      it("should build a IAC report", () => {
-        expect(false).toBeTruthy()
+  describe("ExecutorFactory", () => {
+    describe("build()", () => {
+      it("should build the requested executor", async () => {
+        const executorFactory = new ExecutorFactory()
+        const executor = await executorFactory.build(ReportType.IAC)
+        expect(executor).toBeDefined()
+        expect(executor.generateReport).toBeDefined()
       })
     })
   })

@@ -5,7 +5,7 @@ export enum BinaryType {
   KICS,
 }
 export interface IDownloadService {
-  download(): Promise<void>
+  download(downloadLocation: string): Promise<void>
 }
 export interface IDownloadServiceFactory {
   build(type: BinaryType): Promise<IDownloadService>
