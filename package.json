@@ -1,5 +1,5 @@
 {
-  "name": "nest-starter",
+  "name": "the-watcher",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -7,22 +7,22 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "build:image": "docker build . -t ghcr.io/bryopsida/nestjs-starter:local",
+    "build:image": "docker build . -t ghcr.io/bryopsida/the-watcher:local",
     "build:docs": "npx @compodoc/compodoc -p tsconfig.json -d docs",
     "minikube:start": "minikube start --memory=4192m --disk-size=8g --cpus=2 --addons=[ingress,storage-provisioner,default-storageclass,metrics-server]",
     "minikube:stop": "minikube stop",
     "minikube:delete": "minikube delete",
-    "minikube:copyImage": "minikube image load ghcr.io/bryopsida/nestjs-starter:local",
-    "helm:template": "helm template nestjs-starter ./charts/nestjs-starter/",
-    "helm:deploy": "helm upgrade --install nestjs-starter ./charts/nestjs-starter/ --set image.tag=local --set image.pullPolicy=IfNotPresent --debug --wait",
-    "helm:test": "helm test nestjs-starter",
-    "helm:uninstall": "helm del nestjs-starter",
+    "minikube:copyImage": "minikube image load ghcr.io/bryopsida/the-watcher:local",
+    "helm:template": "helm template the-watcher ./charts/the-watcher/",
+    "helm:deploy": "helm upgrade --install the-watcher ./charts/the-watcher/ --set image.tag=local --set image.pullPolicy=IfNotPresent --debug --wait",
+    "helm:test": "helm test the-watcher",
+    "helm:uninstall": "helm del the-watcher",
     "start": "nest start",
     "start:dev": "nest start --watch | pino-pretty",
     "test": "jest --coverage",
     "lint": "eslint --ext .ts src/ && prettier --check .",
     "lint:fix": "eslint --ext .ts src/ --fix && prettier --write .",
-    "postman": "newman run './charts/nestjs-starter/postman/Nest.JS-Starter.postman_collection.json' -e './charts/nestjs-starter/postman/Nest.JS-Starter.postman_environment.json'"
+    "postman": "newman run './charts/the-watcher/postman/Nest.JS-Starter.postman_collection.json' -e './charts/the-watcher/postman/Nest.JS-Starter.postman_environment.json'"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
