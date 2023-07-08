@@ -1,0 +1,19 @@
+name: Release Chart
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'charts/**'
+      - '.github/workflows/release.yml'
+jobs:
+  Release:
+    name: 'Helm'
+    uses: curium-rocks/flows/.github/workflows/helm-release.yml@main
+    permissions:
+      contents: write
+      actions: write
+      deployments: write
+      pages: write
+    with:
+      charts_dir: charts
