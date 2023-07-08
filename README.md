@@ -1,4 +1,5 @@
 # The-Watcher
+
 ## NPM Scripts
 
 | Syntax             | Description                                                         |
