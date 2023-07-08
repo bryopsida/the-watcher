@@ -11,7 +11,7 @@ data:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "nestjs-starter.fullname" . }}-postman-test"
+  name: "{{ include "the-watcher.fullname" . }}-postman-test"
   annotations:
     "helm.sh/hook": test-success
 spec:
@@ -24,9 +24,9 @@ spec:
           mountPath: /postman/
       args:
         - run
-        - "/postman/Nest.JS-Starter.postman_collection.json"
+        - "/postman/the-watcher.postman_collection.json"
         - --env-var
-        - 'server_url=http://{{ include "nestjs-starter.fullname" . }}.{{ .Release.Namespace }}.svc:{{ .Values.service.port }}'
+        - 'server_url=http://{{ include "the-watcher.fullname" . }}.{{ .Release.Namespace }}.svc:{{ .Values.service.port }}'
   volumes:
     - name: collection-volume
       configMap:
