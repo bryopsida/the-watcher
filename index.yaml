@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  the-watcher:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-07-08T13:24:39.964946929Z"
+    description: Watch images in cluster and notify when vulnerabilities are found
+    digest: 6bbd0340265722224840e4b8949755d405b5c835885b6bd84fbf2c4d997759c4
+    name: the-watcher
+    type: application
+    urls:
+    - https://github.com/bryopsida/the-watcher/releases/download/the-watcher-0.3.0/the-watcher-0.3.0.tgz
+    version: 0.3.0
+generated: "2023-07-08T13:24:39.964952029Z"
