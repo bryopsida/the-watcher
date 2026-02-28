@@ -35,7 +35,7 @@
     "@nestjs/swagger": "^8.0.0",
     "@nestjs/terminus": "^10.0.1",
     "bull": "^4.10.4",
-    "cache-manager": "^5.2.3",
+    "cache-manager": "^7.0.0",
     "cache-manager-redis-store": "^3.0.1",
     "helmet": "^8.0.0",
     "nestjs-pino": "^4.0.0",
